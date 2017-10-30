@@ -37,9 +37,6 @@ public class ExampleUsage
         for (final String testMsg : TEST_MESSAGES)
         {
             tcpClient.sendToServer(testMsg);
-
-            // Sleep due to a daemon bug
-            Thread.sleep(100);
         }
 
         // Wait for 1 second to allow responses to be returned.
@@ -56,7 +53,10 @@ public class ExampleUsage
 
         // Kill the threads
         tcpClient.terminate();
-
+        
+        // Wait up to five seconds for the tcpClientThread thread to die
+        tcpClientThread.join(5000);
+        
         System.out.println("PROGRAM TERMINATING!");
     }
 }
