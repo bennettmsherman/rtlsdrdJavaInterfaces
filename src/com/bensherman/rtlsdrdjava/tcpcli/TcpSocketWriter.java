@@ -39,7 +39,7 @@ class TcpSocketWriter implements Runnable
 
     /**
      * Constructs a new TcpSocketWriter.
-     * 
+     *
      * @param socketToWriteTo
      *            The socket which is connected to the server, which this thread
      *            will write to.
@@ -109,7 +109,7 @@ class TcpSocketWriter implements Runnable
     /**
      * Creates a Message based off of the parameter, and adds the new Message to
      * sendMsgQueue
-     * 
+     *
      * @param The
      *            message to be sent
      */
@@ -121,7 +121,7 @@ class TcpSocketWriter implements Runnable
     /**
      * Logs/outputs a message. Replace the System.out.println() with a logger if
      * desired. The message format is "<ThreadName>: msg"
-     * 
+     *
      * @param msg
      *            The msg to log
      */

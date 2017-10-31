@@ -46,17 +46,18 @@ public class ExampleUsage
         System.out.println("Number of completed submissions: " + tcpClient.getCompletedMessageQueueLength());
 
         // Print out received messages
-        for (int responseNum = 0; responseNum < TEST_MESSAGES.length; ++responseNum)
+        // +1 accounts for the UPDATE_AVAILABLE message
+        for (int responseNum = 0; responseNum < TEST_MESSAGES.length + 1; ++responseNum)
         {
             System.out.println(tcpClient.getCompletedMessage() + "\n");
         }
 
         // Kill the threads
         tcpClient.terminate();
-        
+
         // Wait up to five seconds for the tcpClientThread thread to die
         tcpClientThread.join(5000);
-        
+
         System.out.println("PROGRAM TERMINATING!");
     }
 }
