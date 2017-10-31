@@ -110,8 +110,8 @@ class TcpSocketWriter implements Runnable
      * Creates a Message based off of the parameter, and adds the new Message to
      * sendMsgQueue
      *
-     * @param The
-     *            message to be sent
+     * @param msg
+     *            The message to be sent
      */
     void enqueueMessage(final String msg)
     {
