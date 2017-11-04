@@ -46,8 +46,8 @@ public class ExampleUsage
         System.out.println("Number of completed submissions: " + tcpClient.getCompletedMessageQueueLength());
 
         // Print out received messages
-        // +1 accounts for the UPDATE_AVAILABLE message
-        for (int responseNum = 0; responseNum < TEST_MESSAGES.length + 1; ++responseNum)
+        // +2 accounts for the two UPDATE_AVAILABLE messages (after VOLUME and EXECUTE)
+        for (int responseNum = 0; responseNum < TEST_MESSAGES.length + 2; ++responseNum)
         {
             System.out.println(tcpClient.getCompletedMessage() + "\n");
         }
