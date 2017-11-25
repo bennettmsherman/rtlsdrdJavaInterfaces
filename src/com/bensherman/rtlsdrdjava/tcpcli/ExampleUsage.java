@@ -21,6 +21,14 @@ public class ExampleUsage
             // Getter
             "CMDS_IN_USE" };
 
+    /**
+     * Example usage of the RtlsdrdJavaInterfaces package.
+     * 
+     * @param args
+     *            Command line parameters (unused)
+     * @throws Exception
+     *             An exception which is propagated to the main() function.
+     */
     public static void main(final String[] args) throws Exception
     {
 

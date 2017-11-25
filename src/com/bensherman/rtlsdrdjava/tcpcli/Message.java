@@ -9,7 +9,7 @@ public class Message
      * indicates that the response contains some form of exception message from
      * rtlsdrd. "UPDATE_AVAILABLE" corresponds to the update string having been sent
      * asynchronously by the server.
-     * 
+     *
      * @author Bennett Sherman
      *
      */

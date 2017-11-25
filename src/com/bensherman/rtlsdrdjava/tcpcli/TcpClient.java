@@ -289,6 +289,28 @@ public class TcpClient implements Runnable
     }
 
     /**
+     * Sets an UncaughtExceptionHandler for the socket reader thread.
+     *
+     * @param handler
+     *            The socket reader thread's new UncaughtExceptionHandler
+     */
+    public void setReaderThreadUncaughtExceptionHandler(final Thread.UncaughtExceptionHandler handler)
+    {
+        socketReaderThread.setUncaughtExceptionHandler(handler);
+    }
+
+    /**
+     * Sets an UncaughtExceptionHandler for the socket writer thread.
+     *
+     * @param handler
+     *            The socket writer thread's new UncaughtExceptionHandler
+     */
+    public void setWriterThreadUncaughtExceptionHandler(final Thread.UncaughtExceptionHandler handler)
+    {
+        socketWriterThread.setUncaughtExceptionHandler(handler);
+    }
+
+    /**
      * @return The number of completed messages waiting to be received using
      *         getCompletedMessage()
      */

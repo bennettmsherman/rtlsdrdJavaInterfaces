@@ -266,7 +266,7 @@ class TcpSocketReader implements Runnable
      * and responseMessage of the msg parameter (which is expected to be the
      * UPDATE_AVAILABLE + timestamp string from rtlsdrd). The listener to the
      * completed message queue can handle this message type appropriately.
-     * 
+     *
      * @param msg
      *            The UPDATE_AVAILABLE + timestamp string from rtlsdrd
      */
